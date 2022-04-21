@@ -1,18 +1,17 @@
 import video from "../data/video.js";
+import Iframe from "./Iframe.js";
+import React from "react";
+import Buttons from "./Buttons.js";
+import VideoDes from "./VideoDes.js";
+
 
 function App() {
-  console.log("Here's your data:", video);
-
+  
   return (
     <div className="App">
-      <iframe
-        width="919"
-        height="525"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        frameBorder="0"
-        allowFullScreen
-        title="Thinking in React"
-      />
+      <Iframe video={video} />
+      <VideoDes video={video} />
+      <Buttons video={video} /> 
     </div>
   );
 }
